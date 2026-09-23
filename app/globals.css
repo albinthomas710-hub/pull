@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3eee4;
+  --ink: #1b1612;
+  --muted: #6d655c;
+  --line: #e3d7c6;
+  --card: #fffaf3;
+  --pull: #0c6b52;
+  --pull-soft: #e4f3ec;
+  --stop: #8d2f2c;
+  --stop-soft: #f8e7e3;
+  --warn: #8a5a12;
+  --warn-soft: #f8efd4;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(12, 107, 82, 0.06), transparent 50%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, .display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-weight: 460;
+  letter-spacing: -0.03em;
+}
+
+::selection {
+  background: #d7efe4;
+}
+
+input, textarea, select, button {
+  font: inherit;
+}
+
+input:not([type="checkbox"]), textarea, select {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  outline: none;
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+}
+
+input:not([type="checkbox"]):focus, textarea:focus, select:focus {
+  border-color: #b7a48a;
+  box-shadow: 0 0 0 3px rgba(12, 107, 82, 0.12);
+}
+
+textarea {
+  min-height: 6.5rem;
+  resize: vertical;
+}
